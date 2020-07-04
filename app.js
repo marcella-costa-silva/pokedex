@@ -1,3 +1,7 @@
+window.addEventListener('load', () => {
+  fetchPokemon()
+})
+
 const fetchPokemon = () => {
   const promises = []
 
@@ -14,8 +18,11 @@ const fetchPokemon = () => {
       type: data.types.map(type => type.type.name).join(', ')
     }))
 
-    console.log(pokemon)
+    displayPokemon(pokemon)
   })
 }
 
-fetchPokemon()
+const displayPokemon = (pokemon) => {
+  console.log(pokemon)
+}
+

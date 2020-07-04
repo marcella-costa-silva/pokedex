@@ -1,2 +1,2 @@
 # pokedex
-Build a Pokedex with Vanilla HTML, CSS, and JavaScript
+Build a Pokedex with HTML, CSS, and JavaScript

@@ -1,4 +1,5 @@
 window.addEventListener('load', () => {
+  const pokedex = document.querySelector('#pokedex')
   fetchPokemon()
 })
 
@@ -24,5 +25,14 @@ const fetchPokemon = () => {
 
 const displayPokemon = (pokemon) => {
   console.log(pokemon)
-}
 
+  const pokemonHTMLString = pokemon.map(infoPokemon => `
+    <li class="card">
+      <img class="card-image" src="${infoPokemon.image}" alt="${infoPokemon.name}" />
+      <h2 class="card-title ">${infoPokemon.id}. ${infoPokemon.name}</h2>
+      <p class="card-subtitle">Type: ${infoPokemon.type}</p>
+    </li>
+  `).join('')
+
+  pokedex.innerHTML = pokemonHTMLString
+}
